@@ -3,7 +3,7 @@
 
 
 /**
- * main - function to print ten times the alphabet
+ * print_alphabet_x10 - function to print ten times the alphabet
  *
  * Return: Always 0 (Success)
  */
@@ -11,7 +11,7 @@
 void print_alphabet_x10(void)
 
 {
-	
+
 	char c, i;
 
 	for (i = 0; i <= 9; i++)
