@@ -12,27 +12,27 @@ char *str_concat(char *s1, char *s2)
 
 {
 
-	int a, b, c;
 	char *my_array;
+	unsigned int i, a, b, c;
 
-	c = 0;
-	my_array = malloc(sizeof(*s1 + *s2));
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (a = 0; s2[a] != '\0'; a++)
+		;
+	my_array = malloc(sizeof(char) * (i + a + 1));
 	if (my_array == NULL)
+	{
+		free(my_array);
 		return (NULL);
-	a = 0;
-	while (s1[a] != '\0')
-	{
-		my_array[c] = s1[a];
-		a++;
-		c++;
 	}
-	b = 0;
-	while (s2[b] != '\0')
-	{
-		my_array[c] = s2[b];
-		b++;
-		c++;
-	}
+	for (b = 0; b < i; b++)
+		my_array[b] = s1[b];
+	c = a;
+	for (a = 0; a <= limit; b++, a++)
+		my_array[b] = s2[a];
 	return (my_array);
-	free(my_array);
 }
