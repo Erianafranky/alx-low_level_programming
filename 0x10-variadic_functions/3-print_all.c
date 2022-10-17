@@ -42,10 +42,10 @@ void print_all(const char * const format, ...)
 			if (!str)
 			{
 				printf("(nil)");
-				break
+				break;
 			}
 			printf("%s", str);
-			break
+			break;
 		} i++;
 	}
 	printf("\n"), va_end(valist);
